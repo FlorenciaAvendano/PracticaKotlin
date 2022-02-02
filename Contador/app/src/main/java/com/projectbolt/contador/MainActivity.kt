@@ -22,26 +22,15 @@ class MainActivity : AppCompatActivity() {
             textoContador.text="$contador"
         }
         botonRestar.setOnClickListener {
-            contador--
-            textoContador.text="$contador"
+            if(contador>0){
+                contador--
+                textoContador.text="$contador"
+            }
         }
         botonRestart.setOnClickListener {
             contador=0
             textoContador.text="$contador"
         }
-    //Setear la pantalla inicial
-//val variable inmutable
-       /* val texto = findViewById<TextView>(R.id.texto)
-        texto.text="Hola desde Kotlin"
-
-        val boton = findViewById<Button>(R.id.boton)//evento boton
-        boton.setOnClickListener {//expresion lambda
-            texto.text="OUCH!"
-        }
-
-        val editNombre = findViewById<EditText>(R.id.editNombre)
-        val nombre = editNombre.text*/
-
 
     }
 }
